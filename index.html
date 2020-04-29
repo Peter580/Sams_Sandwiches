@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sams Sandweches</title>
+	<link href="Sams_sandwiches_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>Sam's sandwich shop</h1>
+	<p></p>
+	<h2>Place your order here</h2>
+	<form id="sandwichOrder" name="sandwichOrder">
+		<h3>Sandwich</h3><input name="bread_length" type="radio" value="6inch">Six inch <input name="bread_length" type="radio" value="12inch">Twelve inch
+		<h3>Bread</h3><input name="bread_type" type="radio" value="White">White <input name="bread_type" type="radio" value="Wholegrain">Wholegrain <input name="bread_type" type="radio" value="Italian">Italian <input name="bread_type" type="radio" value="Rye">Rye<input name="bread_type" type="radio" value="">Wrap
+		<h3>Cheese</h3><input name="cheese" type="radio" value="Swiss">Swiss <input name="cheese" type="radio" value="Chedder">Chedder <input name="cheese" type="radio" value="Old English">Old English <input name="cheese" type="radio" value="No Cheese">No Cheese
+		<h3>Meat</h3><input type="radio" value="Ham">Ham <input type="radio" value="Chicken">Chicken <input type="radio" value="Turkey">Turkey <input type="radio" value="Salami">Salami <input type="radio" value="Meatball">Meatball <input type="radio" value="Beef">Beef
+		<h3>Salads</h3><input type="radio" value="Lettuce">Lettuce <input type="radio" value="Tomatoes">Tomatoes <input type="radio" value="Carrot">Carrot <input type="radio" value="Cucumber">Cucumber <input type="radio" value="Pepper">Pepper <button type="reset">Reset</button>
+	</form>
+	<h2>Order Summary</h2>
+	<div id="cbResults"></div>
+	<div id="radioResults"></div>
+	<h2>Your details</h2>Your name :
+	<form>
+		<input id="name" pattern="[a-zA-Z]\w{1,39}" placeholder="Please type your name" type="text"><br>
+		Your cellphone number: <input id="cellphone" pattern="02[0-9]\d{6,8}" placeholder="Please enter your phone number" type="tel"> <input id="submit_button" onclick="loopForm(document.order)" type="button" value="submit"> <!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.cofm/firebasejs/7.14.2/firebase.js">
+		</script> <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+		 
+		<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+		  apiKey: "AIzaSyB2iGeSf1P81-8C4egROM2hBwVjDBQR0sg",
+		  authDomain: "sam-s-sandwich-shop-bc575.firebaseapp.com",
+		  databaseURL: "https://sam-s-sandwich-shop-bc575.firebaseio.com",
+		  projectId: "sam-s-sandwich-shop-bc575",
+		  storageBucket: "sam-s-sandwich-shop-bc575.appspot.com",
+		  messagingSenderId: "854706453671",
+		  appId: "1:854706453671:web:1fc4e44dabb8ffd0c86f82"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		</script> 
+		<script src="Sams_sandwiches_v1.js">
+		</script> 
+	</form>
+</body>
+</html>
