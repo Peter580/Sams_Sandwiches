@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sams Sandweches</title>
+<link href="Sams_sandwiches_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1>Sam's sandwich shop</h1>
+	<p></p>
+	<h2>Place your order here</h2>
+	<form name="sandwichOrder">
+	<h3>Sandwich</h3>
+	<lable><input type="radio" name="bread_length"  value="6inch">Six inch </lable>
+	<lable><input type="radio" name="bread_length" value="12inch">Twelve inch </lable>
+	
+	<h3>Bread</h3>
+	<lable><input type="radio" name="bread_type" value="White">White</lable>
+	<lable><input type="radio" name="bread_type"  value="Wholegrain">Wholegrain</lable>
+	<lable><input type="radio" name="bread_type" value="Italian">Italian</lable>
+	<lable><input type="radio" name="bread_type" value="Rye">Rye</lable><lable><input type="radio" name="bread_type"  value="">Wrap</lable>
+	
+	<h3>Cheese</h3>
+	<labke><input type="radio" name="cheese" value="Swiss">Swiss</labke>
+	<labke><input type="radio"  name="cheese" value="Chedder">Chedder</labke>
+	<labke><input type="radio"  name="cheese" value="Old English">Old English</labke>
+	<labke><input type="radio"  name="cheese" value="No Cheese">No Cheese</labke>
+	
+	<h3>Meat</h3>
+	<lable><input type="radio" value="Ham">Ham</lable>
+	<lable><input type="radio"  value="Chicken">Chicken</lable>
+	<lable><input type="radio"  value="Turkey">Turkey</lable>
+	<lable><input type="radio"  value="Salami">Salami</lable>
+	<lable><input type="radio"  value="Meatball">Meatball</lable>
+	<lable><input type="radio"  value="Beef">Beef</lable>
+	
+	<h3>Salads</h3>
+	<lable><input type="radio" value="Lettuce">Lettuce</lable>
+	<lable><input type="radio" value="Tomatoes">Tomatoes</lable>
+	<lable><input type="radio" value="Carrot">Carrot</lable>
+	<lable><input type="radio" value="Cucumber">Cucumber</lable>
+	<lable><input type="radio" value="Pepper">Pepper</lable>
+	
+	<button type="reset">Reset</button>
+		
+	</form>
+		
+	<h2>Order Summary</h2>
+	<div id="cbResults"></div>
+		<div id="radioResults"></div>
+	
+		
+		<h2>Your details</h2>
+		<lable>Your name :</lable><input type="text" id="name" placeholder="Please type your name" pattern="[a-zA-Z]\w{1,39}"><br>
+		<lable>Your cellphone number: </lable> <input id="cellphone" type="tel" placeholder="Please enter your phone number" pattern="02[0-9]\d{6,8}">
+		<input type="button" value="submit" id="submit_button" onClick="loopForm(document.order)">
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.cofm/firebasejs/7.14.2/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB2iGeSf1P81-8C4egROM2hBwVjDBQR0sg",
+    authDomain: "sam-s-sandwich-shop-bc575.firebaseapp.com",
+    databaseURL: "https://sam-s-sandwich-shop-bc575.firebaseio.com",
+    projectId: "sam-s-sandwich-shop-bc575",
+    storageBucket: "sam-s-sandwich-shop-bc575.appspot.com",
+    messagingSenderId: "854706453671",
+    appId: "1:854706453671:web:1fc4e44dabb8ffd0c86f82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+	<script src="Sams_sandwiches_v1.js"></script>
+</body>
+</html>
